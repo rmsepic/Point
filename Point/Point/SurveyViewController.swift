@@ -9,8 +9,10 @@
 import CoreLocation
 import UIKit
 
+
+
 class SurveyViewController: UIViewController {
-    let location_manager = CLLocationManager()  // NEEDS to be declared globally
+    let location_manager = CLLocationManager()  // NEEDS to be declared globally so the permissions notification shows properly
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,22 +23,35 @@ class SurveyViewController: UIViewController {
         
         if(CLLocationManager.authorizationStatus() == .authorizedAlways || CLLocationManager.authorizationStatus() == .authorizedWhenInUse) {
             curr_location = self.location_manager.location
-            print("Lat \(curr_location.coordinate.latitude)")
-            print("Long \(curr_location.coordinate.longitude)")
+    
+          //  print("Lat \(curr_location.coordinate.latitude)")
+          // print("Long \(curr_location.coordinate.longitude)")
         } else {
             print("Did not receive user permission for location")
         }
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func add_lithic(_ sender: Any) {
+        createFile()
     }
-    */
+    
+    func createFile() {
+        let file = "file2.csv"
+        let text = "some text"
+        if let dir = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first {
+            let file_url = dir.appendingPathComponent(file)
+            
+            do {
+                try text.write(to: file_url, atomically: false, encoding: String.Encoding.utf8)
+            } catch {
+                print("ERROR when trying to write to file")
+            }
+        }
 
+    }
+    
+    func getDocumentsDirectory() -> URL {
+        let paths = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
+        return paths[0]
+    }
 }
