@@ -23,6 +23,15 @@
                                     <action selector="add_lithic:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Oae-bm-rJZ"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B7o-0v-FUo">
+                                <rect key="frame" x="213" y="170" width="90" height="71"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Share"/>
+                                <connections>
+                                    <action selector="add_lithic:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1bt-7L-lyd"/>
+                                    <action selector="export:" destination="BYZ-38-t0r" eventType="touchUpInside" id="E0I-JC-7TV"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
