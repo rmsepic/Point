@@ -13,6 +13,7 @@
 		BA86E77B24BFAE3800A19A45 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BA86E77A24BFAE3800A19A45 /* Assets.xcassets */; };
 		BA86E77E24BFAE3800A19A45 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA86E77C24BFAE3800A19A45 /* LaunchScreen.storyboard */; };
 		BA86E78624BFAEF400A19A45 /* SurveyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA86E78524BFAEF400A19A45 /* SurveyViewController.swift */; };
+		BAF37AED24DDFC150038B2B3 /* EnterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAF37AEC24DDFC150038B2B3 /* EnterViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		BA86E77D24BFAE3800A19A45 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BA86E77F24BFAE3800A19A45 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BA86E78524BFAEF400A19A45 /* SurveyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyViewController.swift; sourceTree = "<group>"; };
+		BAF37AEC24DDFC150038B2B3 /* EnterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 			children = (
 				BA86E77124BFAE3600A19A45 /* AppDelegate.swift */,
 				BA86E77324BFAE3600A19A45 /* SceneDelegate.swift */,
+				BAF37AEC24DDFC150038B2B3 /* EnterViewController.swift */,
 				BA86E78524BFAEF400A19A45 /* SurveyViewController.swift */,
 				BA86E77724BFAE3600A19A45 /* Main.storyboard */,
 				BA86E77A24BFAE3800A19A45 /* Assets.xcassets */,
@@ -139,6 +142,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BA86E77224BFAE3600A19A45 /* AppDelegate.swift in Sources */,
+				BAF37AED24DDFC150038B2B3 /* EnterViewController.swift in Sources */,
 				BA86E78624BFAEF400A19A45 /* SurveyViewController.swift in Sources */,
 				BA86E77424BFAE3600A19A45 /* SceneDelegate.swift in Sources */,
 			);

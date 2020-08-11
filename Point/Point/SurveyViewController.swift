@@ -10,12 +10,17 @@ import CoreLocation
 import MessageUI
 import UIKit
 
-
 class SurveyViewController: UIViewController, MFMailComposeViewControllerDelegate {
     let location_manager = CLLocationManager()  // NEEDS to be declared globally so the permissions notification shows properly
     
+    /// Personal information given at the beginning
+    var user:String = ""
+    var project: String = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        createFile() // Crate the csv file which will be used
         
         var curr_location: CLLocation!
         self.location_manager.requestWhenInUseAuthorization()
@@ -31,8 +36,10 @@ class SurveyViewController: UIViewController, MFMailComposeViewControllerDelegat
     }
     
     @IBAction func add_lithic(_ sender: Any) {
-        createFile()
+        writeToFile(text: "lithic")
     }
+    
+    
     
     /// Export the information from the CSV file
     @IBAction func export(_ sender: Any) {
@@ -52,7 +59,7 @@ class SurveyViewController: UIViewController, MFMailComposeViewControllerDelegat
     
     func createFile() {
         let file = "file.csv"
-        let text = "some text"
+        let text = "User,Project,Device,Artifact,Note,Latitude,Longitude,Error"
         if let dir = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first {
             let file_url = dir.appendingPathComponent(file)
             
@@ -62,7 +69,26 @@ class SurveyViewController: UIViewController, MFMailComposeViewControllerDelegat
                 print("ERROR when trying to write to file")
             }
         }
-
+    }
+    
+    func writeToFile(text: String) {
+        let file = self.user + "-" + self.project + ".csv"
+        
+        let curr_location:CLLocation! = self.location_manager.location
+        let lat = String(curr_location.coordinate.latitude)
+        let long = String(curr_location.coordinate.longitude)
+        
+        let line:String = self.user + "," + self.project + "," + text + ",TODO:note," + lat + "," + long + ",error"
+        
+        if let dir = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first {
+            let file_url = dir.appendingPathComponent(file)
+            
+            do {
+                try line.write(to: file_url, atomically: false, encoding: String.Encoding.utf8)
+            } catch {
+                print("ERROR when trying to write to file")
+            }
+        }
     }
     
     /// Function returns the file path for the stored CSV file

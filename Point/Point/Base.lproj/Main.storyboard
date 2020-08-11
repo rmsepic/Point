@@ -1,45 +1,234 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="coZ-YB-OCJ">
+    <device id="retina4_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Survey View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--Enter View Controller-->
+        <scene sceneID="E6d-8l-A3w">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="SurveyViewController" customModule="Point" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                <viewController id="Tno-SW-3bf" customClass="EnterViewController" customModule="Point" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="gRd-D6-Uyj">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gsy-Ei-mNL">
-                                <rect key="frame" x="42" y="170" width="90" height="71"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="User" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H3o-UK-7pi">
+                                <rect key="frame" x="50" y="79" width="37" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Project" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0lL-H9-2uL">
+                                <rect key="frame" x="50" y="130" width="54.5" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RGi-65-R37">
+                                <rect key="frame" x="103" y="74" width="201" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SU6-1n-BRw">
+                                <rect key="frame" x="119.5" y="128" width="184.5" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ull-9Y-qGY">
+                                <rect key="frame" x="136" y="192" width="48" height="30"/>
+                                <state key="normal" title="ENTER">
+                                    <color key="titleShadowColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="enter:" destination="Tno-SW-3bf" eventType="touchUpInside" id="GJ6-pK-wyc"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="H3o-UK-7pi" firstAttribute="leading" secondItem="A36-mk-NFz" secondAttribute="leading" constant="50" id="9xF-lB-0Ti"/>
+                            <constraint firstItem="0lL-H9-2uL" firstAttribute="leading" secondItem="A36-mk-NFz" secondAttribute="leading" constant="50" id="Fta-oN-r4u"/>
+                            <constraint firstItem="A36-mk-NFz" firstAttribute="trailing" secondItem="SU6-1n-BRw" secondAttribute="trailing" constant="16" id="Iey-27-rbC"/>
+                            <constraint firstItem="H3o-UK-7pi" firstAttribute="top" secondItem="A36-mk-NFz" secondAttribute="top" constant="35" id="J3e-jl-erW"/>
+                            <constraint firstItem="A36-mk-NFz" firstAttribute="trailing" secondItem="ull-9Y-qGY" secondAttribute="trailing" constant="136" id="Soa-8T-FmZ"/>
+                            <constraint firstItem="0lL-H9-2uL" firstAttribute="top" secondItem="H3o-UK-7pi" secondAttribute="bottom" constant="30" id="bTZ-Ik-IWG"/>
+                            <constraint firstItem="RGi-65-R37" firstAttribute="top" secondItem="A36-mk-NFz" secondAttribute="top" constant="30" id="eD5-Hl-DQT"/>
+                            <constraint firstItem="ull-9Y-qGY" firstAttribute="top" secondItem="SU6-1n-BRw" secondAttribute="bottom" constant="30" id="h19-Sx-avT"/>
+                            <constraint firstItem="SU6-1n-BRw" firstAttribute="leading" secondItem="0lL-H9-2uL" secondAttribute="trailing" constant="15" id="jMi-Kh-KS5"/>
+                            <constraint firstItem="ull-9Y-qGY" firstAttribute="leading" secondItem="A36-mk-NFz" secondAttribute="leading" constant="136" id="nRz-qV-ysA"/>
+                            <constraint firstItem="A36-mk-NFz" firstAttribute="trailing" secondItem="RGi-65-R37" secondAttribute="trailing" constant="16" id="tPt-6a-XO0"/>
+                            <constraint firstItem="SU6-1n-BRw" firstAttribute="top" secondItem="RGi-65-R37" secondAttribute="bottom" constant="20" id="uLo-Ka-CWf"/>
+                            <constraint firstItem="RGi-65-R37" firstAttribute="leading" secondItem="H3o-UK-7pi" secondAttribute="trailing" constant="16" id="zFO-t9-4l1"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="A36-mk-NFz"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="TSX-Nb-dt2"/>
+                    <connections>
+                        <outlet property="project" destination="SU6-1n-BRw" id="Os4-OX-6vJ"/>
+                        <outlet property="user" destination="RGi-65-R37" id="l6B-pl-Zt8"/>
+                        <segue destination="BYZ-38-t0r" kind="show" id="wHR-rH-4zS"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="94A-r1-gNT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-390" y="132.04225352112675"/>
+        </scene>
+        <!--SurveyVC-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="SurveyVC" title="SurveyVC" id="BYZ-38-t0r" customClass="SurveyViewController" customModule="Point" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gsy-Ei-mNL">
+                                <rect key="frame" x="79" y="65" width="37" height="40"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Lithic"/>
+                                <state key="normal" image="rocks">
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="small"/>
+                                </state>
                                 <connections>
                                     <action selector="add_lithic:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Oae-bm-rJZ"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B7o-0v-FUo">
-                                <rect key="frame" x="213" y="170" width="90" height="71"/>
+                                <rect key="frame" x="88" y="397" width="58" height="40"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Share"/>
+                                <state key="normal" backgroundImage="arrowshape.turn.up.right" catalog="system"/>
                                 <connections>
                                     <action selector="add_lithic:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1bt-7L-lyd"/>
                                     <action selector="export:" destination="BYZ-38-t0r" eventType="touchUpInside" id="E0I-JC-7TV"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Lithic" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ngV-OO-Q3s">
+                                <rect key="frame" x="139" y="65" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Bone" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t3X-4A-0Za">
+                                <rect key="frame" x="139" y="143" width="40" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AVd-OQ-1Rj">
+                                <rect key="frame" x="220" y="137" width="28" height="27"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <connections>
+                                    <action selector="add_lithic:" destination="BYZ-38-t0r" eventType="touchUpInside" id="X5H-Y0-18r"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RhT-2e-RTa">
+                                <rect key="frame" x="217" y="65" width="34" height="41"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="stone"/>
+                                <connections>
+                                    <action selector="add_lithic:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HJe-pE-jAb"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eyd-Rs-jbf">
+                                <rect key="frame" x="88" y="204" width="28" height="27"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <connections>
+                                    <action selector="add_lithic:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tnB-yb-A5s"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eFF-1x-a3a">
+                                <rect key="frame" x="217" y="204" width="28" height="27"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <connections>
+                                    <action selector="add_lithic:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MHI-89-YGz"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HXo-rR-Pyg">
+                                <rect key="frame" x="88" y="275" width="28" height="27"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <connections>
+                                    <action selector="add_lithic:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9uB-Ig-pkw"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bi7-ha-8IU">
+                                <rect key="frame" x="88" y="336" width="28" height="27"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <connections>
+                                    <action selector="add_lithic:" destination="BYZ-38-t0r" eventType="touchUpInside" id="sKz-gp-UDT"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d7K-FF-qzM">
+                                <rect key="frame" x="243" y="336" width="28" height="27"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <connections>
+                                    <action selector="add_lithic:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pHs-Wc-mgD"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ycx-Yq-ver">
+                                <rect key="frame" x="243" y="404" width="43" height="33"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" backgroundImage="delete.left" catalog="system"/>
+                                <connections>
+                                    <action selector="add_lithic:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Tp9-OF-YTY"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleAspectFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d8Q-jw-Tjz">
+                                <rect key="frame" x="79" y="135" width="37" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="bone"/>
+                                <connections>
+                                    <action selector="add_lithic:" destination="BYZ-38-t0r" eventType="touchUpInside" id="61v-Eq-c2Q"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ve7-UY-8N3">
+                                <rect key="frame" x="217" y="275" width="28" height="25"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <connections>
+                                    <action selector="add_lithic:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kbY-3v-Vd9"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <navigationItem key="navigationItem" id="vGc-Iz-dWO"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="137.68115942028987" y="129.91071428571428"/>
+            <point key="canvasLocation" x="410.625" y="132.04225352112675"/>
+        </scene>
+        <!--Main Nav Controller-->
+        <scene sceneID="KGO-dg-Oce">
+            <objects>
+                <navigationController storyboardIdentifier="MainNavController" id="coZ-YB-OCJ" customClass="MainNavController" customModule="Wallet" customModuleProvider="target" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="3ox-Sk-4y0">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="Tno-SW-3bf" kind="relationship" relationship="rootViewController" id="7oW-hb-Ys4"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="arq-is-AYO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1262" y="132"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="arrowshape.turn.up.right" catalog="system" width="128" height="106"/>
+        <image name="bone" width="512" height="512"/>
+        <image name="delete.left" catalog="system" width="128" height="104"/>
+        <image name="rocks" width="512" height="512"/>
+        <image name="stone" width="512" height="512"/>
+    </resources>
 </document>
